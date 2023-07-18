@@ -33,7 +33,7 @@ import java.util.Iterator;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     // Declare UI elements
-    TextView resultTV, solutionTV, newcurrencyTV;
+    TextView resultTV, solutionTV, currencyTV;
     ImageButton buttonC, buttonB, buttonMultiply, buttonDivide, buttonPlus, buttonMinus, buttonDot,
             button0, button1, button2, button3, button4, button5, button6, button7, button8, button9;
     Spinner spinner;
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Initialize UI elements
         resultTV = findViewById(R.id.textview_result);
         solutionTV = findViewById(R.id.textview_solution);
-        newcurrencyTV = findViewById(R.id.textview_newcurrency);
+        currencyTV = findViewById(R.id.textview_newcurrency);
 
         // Assign click listeners to buttons
         assignId(buttonC, R.id.button_clear);
@@ -103,7 +103,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // Parse the JSON data to fetch currency rates
     public void jsonParse() {
         // API URL to fetch currency rates
-        String URL = "https://raw.githubusercontent.com/OutrageGames/curgit/main/cur.json";
+//        String URL = "https://raw.githubusercontent.com/OutrageGames/curgit/main/cur.json"; // Testing purposes
+        String URL = "http://data.fixer.io/api/latest?access_key=ecbb24f252da0cdb9299e45c4d96bd8b";
 
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
 
@@ -188,7 +189,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             dotEntered = false;
             solutionTV.setText("");
             resultTV.setText("0");
-            newcurrencyTV.setText("0.0");
+            currencyTV.setText("0.0");
             button.startAnimation(anim);
             return;
         }
@@ -236,11 +237,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             } else if (dataToCalculate.length() == 1) {
                 solutionTV.setText("");
                 resultTV.setText("0");
-                newcurrencyTV.setText("0.0");
+                currencyTV.setText("0.0");
                 return;
             } else {
                 resultTV.setText("0");
-                newcurrencyTV.setText("0.0");
+                currencyTV.setText("0.0");
                 return;
             }
         } else {
@@ -306,6 +307,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rate = getRateForCurrency(selectedCurrency);
         Double res = Double.parseDouble(resultTV.getText().toString());
         convertedValue = rate * res;
-        newcurrencyTV.setText(getResult(convertedValue.toString()));
+        currencyTV.setText(getResult(convertedValue.toString()));
     }
 }

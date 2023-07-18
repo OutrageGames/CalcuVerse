@@ -8,12 +8,6 @@
     android:background="#C1ECE4"
     >
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/button_change"-->
-<!--        android:layout_width="109dp"-->
-<!--        android:layout_height="87dp"-->
-<!--        app:srcCompat="@android:drawable/arrow_down_float" />-->
-
     <LinearLayout
         android:id="@+id/cur_layout"
         android:layout_width="match_parent"
@@ -23,16 +17,14 @@
         android:layout_marginBottom="10dp"
         android:background="#40FFFFFF"
         >
+
     <TextView
         android:id="@+id/textview_newcurrency"
         android:layout_width="100dp"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
-
-
         android:layout_weight="1"
         android:fontFamily="@font/outrage"
-
         android:gravity="center|right"
         android:lines="1"
         android:textSize="35dp"
@@ -41,18 +33,13 @@
 
     <Spinner
         android:id="@+id/spinner_currencies"
-
         android:layout_width="50dp"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
         android:layout_weight="1"
-        android:textSize="35dp"
-        />
+        android:textSize="35dp" />
+
     </LinearLayout>
-
-
-
-
 
     <LinearLayout
         android:id="@+id/euro_layout"
@@ -61,11 +48,7 @@
         android:orientation="horizontal"
         android:layout_above="@id/buttons_layout"
         android:layout_marginBottom="10dp"
-        android:background="#40FFFFFF"
-
-        >
-
-
+        android:background="#40FFFFFF" >
 
         <TextView
             android:id="@+id/textview_result"
@@ -73,7 +56,6 @@
             android:layout_height="match_parent"
             android:layout_margin="8dp"
             android:layout_weight="1"
-
             android:fontFamily="@font/outrage"
             android:gravity="center|right"
             android:lines="1"
@@ -81,29 +63,19 @@
             android:textColor="#3AA6B9"
             android:textSize="35dp" />
 
-
-
         <TextView
             android:id="@+id/textview_eur"
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
             android:layout_weight="1"
-
             android:text="EUR      "
             android:gravity="center|center"
             android:textSize="35dp"
             android:fontFamily="@font/outrage"
-
             android:textColor="#3AA6B9" />
 
-
     </LinearLayout>
-
-
-
-
-
 
     <LinearLayout
         android:id="@+id/buttons_layout"
@@ -115,25 +87,10 @@
         android:background="#55FFFFFF"
         >
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-
-
-<!--            <com.google.android.material.button.MaterialButton-->
-<!--                android:id="@+id/button_clear"-->
-<!--                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="72dp"-->
-<!--                android:layout_margin="12dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:text="C"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:textSize="32dp"-->
-<!--                app:backgroundTint="#97D2EC"-->
-<!--                app:cornerRadius="36dp" />-->
 
             <ImageButton
                 android:id="@+id/button_clear"
@@ -149,17 +106,13 @@
 
             <TextView
                 android:id="@+id/textview_solution"
-
                 android:layout_width="125dp"
                 android:layout_height="80dp"
                 android:background="#80FFFFFF"
-
                 android:paddingStart="16dp"
                 android:paddingTop="8dp"
                 android:paddingEnd="16dp"
                 android:paddingBottom="8dp"
-
-
                 android:alpha="0.6"
                 android:fontFamily="@font/outrage"
                 android:layout_weight="1"
@@ -171,21 +124,6 @@
                 android:text=""
                 android:textColor="#3AA6B9"
                 />
-
-<!--            <TextView-->
-<!--                android:id="@+id/textview_solution"-->
-<!--                android:layout_width="100dp"-->
-<!--                android:layout_height="72dp"-->
-<!--                android:layout_margin="12dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:alpha="0.6"-->
-<!--                android:autoSizeMaxTextSize="60sp"-->
-<!--                android:autoSizeMinTextSize="1sp"-->
-<!--                android:autoSizeStepGranularity="2sp"-->
-<!--                android:autoSizeTextType="uniform"-->
-<!--                android:gravity="center|right"-->
-<!--                android:text=""-->
-<!--                android:textColor="#97E9EC" />-->
 
             <ImageButton
                 android:id="@+id/button_backspace"
@@ -206,8 +144,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-
-
 
 
             <ImageButton
@@ -394,20 +330,6 @@
                 android:scaleType="centerInside"
                 />
 
-
-<!--            <com.google.android.material.button.MaterialButton-->
-<!--                android:id="@+id/button_zero"-->
-<!--                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"-->
-<!--                android:layout_width="169dp"-->
-<!--                android:layout_height="72dp"-->
-<!--                android:layout_margin="12dp"-->
-<!--                android:text="0"-->
-<!--                android:layout_weight="1"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:textSize="32dp"-->
-<!--                app:backgroundTint="#97D2EC"-->
-<!--                app:cornerRadius="36dp" />-->
-
             <ImageButton
                 android:id="@+id/button_dot"
                 android:layout_width="72dp"
@@ -436,8 +358,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
-
 
 
 </RelativeLayout>
